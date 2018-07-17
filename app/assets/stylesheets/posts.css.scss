@@ -1,0 +1,23 @@
+#markdown_editor {
+  overflow: hidden;
+
+  :after {
+    clear: both;
+
+  }
+  .box{
+    float: left;
+    height: auto;
+    width: 550px;
+  }
+  #preview {
+    margin-left: 20px;
+    padding: 1px;
+    border: solid 1px black;
+    height: 266px;
+    width: 550px;
+    word-wrap: break-word;
+    line-height: 1.2;
+    overflow: auto;
+  }
+}
