@@ -13,9 +13,14 @@
 <p>
   <strong>Tag:</strong>
   <%= @post.tag_list %>
-</p>
 
-<% render "likes/like" %>
+</p>
+<span id="like<%= @post.id %>">
+  <%= render partial: 'likes/like', locals: { post: @post, like: @like } %>
+</span>
+
+
+
 
 <%= form_for [@post,@post_comment] do |f|%>
             <div class="row">
