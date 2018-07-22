@@ -22,6 +22,8 @@ class PostsController < ApplicationController
     # 追加
     @tags = @search.result
     # binding.pry
+
+    @tag_ranking = Tag.all.sort_by{|p| p.taggings_count}.reverse #ランキング
   end
 
 

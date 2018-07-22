@@ -17,7 +17,6 @@
     <% @posts.each do |post| %>
       <tr>
         <td><%= post.title %></td>
-        <td><%= post.content %></td>
         <td><%= post.user.name %></td>
         <td><%= post.tag_list %></td>
         <td><%= post.likes_count %>いいね！</td>
@@ -28,6 +27,14 @@
     <% end %>
   </tbody>
 </table>
+<table>  <!-- タグランキングのテーブル -->
+      <% sum = 0%>
+    <% @tag_ranking.first(10).each do |rank| %>
+      <td><p>第<%= sum += 1 %>位</p></td>
+      <td><%= rank.name %></td>
+      <% end %>
+</table>
+
 
 <br>
 
