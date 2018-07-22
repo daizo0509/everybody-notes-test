@@ -1,0 +1,11 @@
+
+<h1>Searches#search</h1>
+<p>Find me in app/views/searches/search.html.erb</p>
+
+<%= search_form_for @search, url: searches_index_path do |f| %>
+  <div class="form-group">
+    <%= f.label "タグで検索" %>
+    <%= f.search_field :tags_name_cont, class: "tag" %>
+  </div>
+  <div class="actions"><%= f.submit "Search" %></div>
+<% end %>
